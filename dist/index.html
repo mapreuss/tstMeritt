@@ -11,15 +11,11 @@
 		<!-- Header and navegation -->
 		<header>
 			<h1><a href="#">Monster-App</a></h1>
-			<nav class="navmain"><ul>
-				<li><a href="#">Control Room</a></li>
-				<li><a href="#">History</a></li>
-				<li><a href="#">DNS/SSL</a></li>
-				<li><a href="#">Billing</a></li>
-				<li><a href="#">Mail</a></li>
-				<li><a href="#">Admin</a></li>
-				<li><a href="#">Box Config</a></li>
-			</ul></nav>
+			<nav class="navmain">
+			<ul data-bind="foreach: menuItems" >
+				<li><a href="" data-bind="text: $data.name, css: { active: $data.isActive == true }"></a></li>
+			</ul>
+			</nav>
 			<nav class="subnav fr">
 				<ul>
 					<li><span>App URL</span></li>
@@ -104,8 +100,9 @@
 		</section>
 		
 		<!-- Uptime graph -->
-		<section class="fr graph">
-			[graph]
+		<section class="fr graph clf">
+			<label>Avg. <br> Response <br> Time(sec).</label>
+			<canvas id="canvas" width="400" height="85"></canvas>
 		</section>
 		</div>
 
@@ -157,5 +154,10 @@
 			</aside>
 		</section>
 	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/knockout-3.2.0.js"></script>
+	<script src="js/Chart.Core.js"></script>
+	<script src="js/Chart.Line.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
