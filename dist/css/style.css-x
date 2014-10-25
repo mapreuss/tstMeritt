@@ -1,0 +1,745 @@
+/* 	Resset css from https://gist.github.com/joshuapowell/1680540 
+	(so sorry, I really like Meyer's CSS reset and there's no reason to write this all over again.)
+*/
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+/*
+	Main styles
+	@ Marta Preuss
+	marta.preuss@gmail.com
+*/
+/* Variables */
+/* Mixin */
+/* Helpers */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+a {
+  text-decoration: none;
+}
+.clf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/* Main and header */
+.main {
+  max-width: 988px;
+  margin: 50px auto 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  display: inline-block;
+  background: #fff;
+  top: -34px;
+  padding: 5px 47px 10px 11px;
+  position: relative;
+  box-shadow: 0px -3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+h1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -11px;
+  background: #FFF;
+  height: 38px;
+  width: 23px;
+  transform: skewX(33deg);
+  box-shadow: 3px -1px 5px -2px rgba(0, 0, 0, 0.3);
+}
+h1 a {
+  color: #737373;
+  font: bold 20px 'Ubuntu', sans-serif;
+  position: relative;
+}
+h1 a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 6px 0 6px;
+  border-color: #a4a4a4 transparent transparent transparent;
+  position: absolute;
+  top: 40%;
+  right: -30px;
+}
+.navmain {
+  background-color: #e7e8e9;
+  background-image: -webkit-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: -moz-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: -o-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: -ms-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: linear-gradient(top, #e7e8e9, #d0d4d5);
+  margin: -18px 0 0 0;
+  width: 1005px;
+  position: relative;
+  left: -9px;
+}
+.navmain:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 7px;
+  border-color: transparent transparent #a0a2a6 transparent;
+  top: -7px;
+  left: 1px;
+  position: absolute;
+}
+.navmain:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 0 7px;
+  border-color: transparent transparent transparent #a0a2a6;
+  top: -7px;
+  right: 1px;
+  position: absolute;
+}
+.navmain li {
+  list-style: none;
+  display: inline-block;
+  font: bold 14px 'Ubuntu', sans-serif;
+}
+.navmain li a {
+  color: #6d6f71;
+  border-right: 1px solid #dddedf;
+  display: inline-block;
+  padding: 12px 20px 9px;
+}
+.navmain li a:hover,
+.navmain li a.active {
+  background: #8f9297;
+  background-color: #acadb2;
+  background-image: -webkit-linear-gradient(top, #acadb2, #74797c);
+  background-image: -moz-linear-gradient(top, #acadb2, #74797c);
+  background-image: -o-linear-gradient(top, #acadb2, #74797c);
+  background-image: -ms-linear-gradient(top, #acadb2, #74797c);
+  background-image: linear-gradient(top, #acadb2, #74797c);
+  color: #FFF;
+}
+.subnav {
+  color: #737373;
+  font: 12px 'Ubuntu', sans-serif;
+  margin: 12px 0 0;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  right: -7px;
+}
+.subnav:after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: -2px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 8px 0 0;
+  border-color: #909296 transparent transparent transparent;
+}
+.subnav li {
+  display: inline-block;
+  list-style: none;
+  background: #FFF;
+  border: 3px solid #f3f3f3;
+  border-right: none;
+  border-left: none;
+  padding: 5px 34px;
+  margin: 0 -2px;
+}
+.subnav li:first-child {
+  border-color: #ebebeb;
+  background-color: #ebebeb;
+  border-left: 3px solid #ebebeb;
+  padding: 5px 15px;
+}
+.subnav li:nth-child(2) a {
+  color: #26a9e7;
+  border-right: 1px solid #d5b5b6;
+  padding-right: 27px;
+  margin-right: 0;
+}
+.subnav li:last-child {
+  border-right: 5px solid #f3f3f3;
+  padding-left: 5px;
+  padding-right: 20px;
+}
+.subnav li:last-child a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 3px 0 3px;
+  border-color: #26a9e7 transparent transparent transparent;
+  position: absolute;
+  top: 32%;
+  right: -13px;
+}
+.subnav li a {
+  color: inherit;
+  position: relative;
+}
+/* Web panel */
+.webapp {
+  clear: both;
+  margin: 81px 0 0;
+}
+.webapp h3,
+.webapp nav a {
+  font: bold 12px 'Ubuntu', sans-serif;
+  color: #737373;
+  text-align: center;
+  padding: 2px 0;
+}
+.webapp li {
+  display: block;
+  float: left;
+  text-align: center;
+  list-style: none;
+  width: 143px;
+  vertical-align: top;
+}
+.webapp li:first-child .box {
+  padding: 22px 12px 22px 22px;
+  width: 143px;
+}
+.webapp li span {
+  color: #47b135;
+}
+.webapp li nav {
+  top: -4px;
+  position: relative;
+}
+.webapp li nav a {
+  color: #9d9d9d;
+  text-transform: uppercase;
+  font-weight: normal;
+  position: relative;
+}
+.webapp li nav a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #9d9d9d transparent transparent transparent;
+  position: absolute;
+  top: 32%;
+  right: -10px;
+}
+.webapp li:last-child .box {
+  border-radius: 0 9% 9% 0;
+}
+.webapp li:last-child .box:after,
+.webapp li:last-child .box:before {
+  display: none;
+}
+.webapp .box {
+  display: block;
+  border-right: 1px solid #dbdddd;
+  background: #eaedef;
+  padding: 22px 12px;
+  left: -10px;
+  font: 10px 'Ubuntu', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #e7e8e9;
+  background-image: -webkit-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: -moz-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: -o-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: -ms-linear-gradient(top, #e7e8e9, #d0d4d5);
+  background-image: linear-gradient(top, #e7e8e9, #d0d4d5);
+  position: relative;
+}
+.webapp .box:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 13px 12px 0 12px;
+  border-color: #ffffff transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  right: -13px;
+  z-index: 5;
+}
+.webapp .box:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 13px 12px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  bottom: 0;
+  right: -13px;
+  z-index: 5;
+}
+.webapp ul {
+  position: relative;
+}
+.webapp ul:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 8px 0;
+  border-color: transparent #a0a2a5 transparent transparent;
+  position: absolute;
+  bottom: 16px;
+  left: -10px;
+}
+.webapp .ico {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #47b135;
+  margin: 0 4px 0 0;
+  float: left;
+  position: relative;
+  text-align: center;
+  left: -2px;
+}
+.webapp .ico:before {
+  position: absolute;
+  top: 0;
+  content: ".  .";
+  color: #FFF;
+  left: 9px;
+}
+.webapp .ico:after {
+  position: absolute;
+  bottom: 2px;
+  content: ")";
+  color: #FFF;
+  transform: rotate(90deg);
+}
+.webapp label {
+  text-transform: uppercase;
+  color: #8d8a8a;
+}
+.webapp .stats {
+  background: #FFF;
+  width: 55px;
+  height: 8px;
+  float: right;
+}
+.webapp .stats .bar {
+  height: 8px;
+  background: #47b135;
+}
+.webapp .migrating {
+  width: 218px;
+}
+.webapp .migrating .box {
+  padding: 8px;
+}
+.webapp .migrating .animation {
+  overflow: hidden;
+}
+.webapp .migrating .animation label {
+  background: #737373;
+  color: #FFF;
+  height: 50px;
+  font: bold 16px/54px 'Ubuntu', sans-serif;
+  float: left;
+  width: 95px;
+  text-transform: none;
+  position: relative;
+}
+.webapp .migrating .animation label:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: #ddddee transparent transparent transparent;
+  top: 0;
+  left: 0;
+}
+.webapp .migrating .animation label:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 0 10px;
+  border-color: transparent transparent transparent #ccccee;
+  bottom: 0;
+  left: 0;
+}
+.webapp .migrating .animation .bar {
+  background: #000;
+  float: left;
+  width: 99px;
+  height: 38px;
+  margin: 5px 0;
+  position: relative;
+}
+.webapp .migrating .animation .bar:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 0 10px;
+  border-color: transparent transparent transparent #737373;
+  left: 0;
+  top: 0;
+}
+.webapp .add {
+  padding-top: 17px;
+  width: 105px;
+}
+.webapp .add a {
+  font: 12px 'Ubuntu', sans-serif;
+  color: #737373;
+  padding-bottom: 9px;
+}
+.webapp .add span {
+  font: bold 18px 'Ubuntu', sans-serif;
+  color: #000;
+  display: inline-block;
+  margin-bottom: 1px;
+}
+.webapp .add span:before {
+  content: "+";
+  text-align: center;
+  display: block;
+  float: left;
+  background: #47b135;
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font: 18px/18px arial;
+  margin-right: 5px;
+}
+/* Response time table */
+.responseTime {
+  margin: 86px 0 0 -10px;
+  overflow: hidden;
+  width: 430px;
+}
+.responseTime th,
+.responseTime td {
+  width: 105px;
+  text-align: center;
+}
+.responseTime tr {
+  font: 12px 'Ubuntu', sans-serif;
+  display: block;
+}
+.responseTime tbody tr {
+  margin: 9px 0;
+  background-color: #f7f7f8;
+  background-image: -webkit-linear-gradient(top, #f7f7f8, #e8e8e8);
+  background-image: -moz-linear-gradient(top, #f7f7f8, #e8e8e8);
+  background-image: -o-linear-gradient(top, #f7f7f8, #e8e8e8);
+  background-image: -ms-linear-gradient(top, #f7f7f8, #e8e8e8);
+  background-image: linear-gradient(top, #f7f7f8, #e8e8e8);
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #e1e0e0;
+}
+.responseTime tbody tr td {
+  font: 25px 'Ubuntu', sans-serif;
+  color: #000;
+  padding: 3px 0;
+}
+.responseTime tbody tr td:first-child {
+  font: bold 14px 'Ubuntu', sans-serif;
+  color: #737373;
+  text-align: left;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.responseTime tbody tr td:first-child:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 9px 0;
+  border-color: transparent #7a7a7e transparent transparent;
+}
+.responseTime tbody tr td:last-child {
+  border-left: 1px solid #d8d7d8;
+}
+.responseTime tbody tr td small {
+  font-size: 12px;
+}
+.responseTime th {
+  color: #b8bbbd;
+}
+.responseTime th:first-child {
+  text-align: left;
+  position: relative;
+  padding: 0 0 0 20px;
+}
+.responseTime th:first-child:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 9px 0;
+  border-color: transparent #7a7a7e transparent transparent;
+}
+.responseTime a {
+  background: #47b135;
+  color: #FFF;
+  font: bold 12px 'Ubuntu', sans-serif;
+  border-radius: 0 9% 9% 0;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  padding: 7px 15px 7px 14px;
+  left: -19px;
+  position: relative;
+}
+.responseTime a:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 4.5px 0 4.5px;
+  border-color: #ffffff transparent transparent transparent;
+  content: "";
+  position: relative;
+  float: right;
+  margin: 3px 0 0 6px;
+}
+/* Manage Environment Variable */
+.mgmEnv {
+  clear: both;
+  margin: 75px 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px 20px;
+}
+.mgmEnv h2 {
+  font: 20px 'Ubuntu', sans-serif;
+  color: #737373;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+.mgmEnv h3 {
+  font: bold 14px 'Ubuntu', sans-serif;
+  color: #737373;
+  margin-bottom: 10px;
+}
+.mgmEnv p {
+  font: 12px 'Ubuntu', sans-serif;
+  color: #b4a29d;
+  padding-bottom: 17px;
+}
+.mgmEnv form ul {
+  background: #e5e5e6;
+  border-radius: 5px;
+  width: 550px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  display: block;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.mgmEnv form ul li {
+  margin-bottom: 5px;
+}
+.mgmEnv form ul button {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background: #898989;
+  color: #FFF;
+  font-weight: bold;
+  text-indent: -2px;
+  line-height: 14px;
+}
+.mgmEnv form ul input {
+  width: 235px;
+  height: 25px;
+  border: none;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mgmEnv button[type="submit"] {
+  border-radius: 3px;
+  border: 1px solid #47b135;
+  background-color: #f0ebf2;
+  background-image: -webkit-linear-gradient(top, #f0ebf2, #c7cec9);
+  background-image: -moz-linear-gradient(top, #f0ebf2, #c7cec9);
+  background-image: -o-linear-gradient(top, #f0ebf2, #c7cec9);
+  background-image: -ms-linear-gradient(top, #f0ebf2, #c7cec9);
+  background-image: linear-gradient(top, #f0ebf2, #c7cec9);
+  text-transform: lowercase;
+  font: bold 12px 'Ubuntu', sans-serif;
+  padding: 6px 15px;
+}
+.mgmEnv button.addAnother {
+  border-bottom: none;
+  border-radius: 20px 0 0 20px;
+  position: relative;
+  padding: 7px;
+  font: bold 12px 'Ubuntu', sans-serif;
+  line-height: 20px;
+  border: none;
+}
+.mgmEnv button.addAnother:before {
+  content: "+";
+  color: #FFF;
+  background: #47b135;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin-right: 6px;
+}
+.mgmEnv aside {
+  width: 276px;
+  padding-left: 44px;
+  border-left: 1px solid #f2f2f2;
+}
+.mgmEnv aside li {
+  font: 12px 'Ubuntu', sans-serif;
+  list-style-position: inside;
+  color: #26a9e7;
+}
+.mgmEnv aside li a {
+  color: #26a9e7;
+}
