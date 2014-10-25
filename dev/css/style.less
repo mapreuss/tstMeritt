@@ -74,6 +74,14 @@ a img {
 .fl{float: left;}
 .fr{float: right;}
 a{text-decoration: none;}
+.clf:after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
 
 /* Main and header */
 .main{
@@ -428,5 +436,105 @@ h1{
 	}
 }
 
-/**/
-.mgmEnv{clear: both;}
+/* Manage Environment Variable */
+.mgmEnv{
+	clear: both;
+	margin: 75px 0 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 20px 20px;
+	h2{
+		font:20px @fontfamily;
+		color: @colorbase;
+		border-bottom: 1px solid #e9e9e9;
+		padding-bottom: 5px;
+		margin-bottom: 30px;
+	}
+	h3{
+		font:bold 14px @fontfamily;
+		color: @colorbase;
+		margin-bottom: 10px;
+	}
+	p{
+		font:12px @fontfamily;
+		color:#b4a29d;
+		padding-bottom: 17px;
+	}
+	form ul{
+		background: #e5e5e6;
+		border-radius: 5px;
+		width: 550px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 20px;	
+		display: block;
+		list-style: none;	
+		margin-bottom: 10px;
+		li{
+			margin-bottom: 5px;
+		}
+		button{
+			border-radius: 50%;
+			width: 16px;
+			height: 16px;
+			border: none;
+			background: #898989;
+			color: #FFF;
+			font-weight: bold;
+			text-indent: -2px;
+			line-height: 14px;
+		}	
+		input{
+			width: 235px;
+			height: 25px;
+			border: none;
+			padding: 0 5px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	}
+	button[type="submit"]{
+		border-radius: 3px;
+		border: 1px solid @secundaryColor;
+		.gradient(top,#f0ebf2, #c7cec9);
+		text-transform: lowercase;
+		font:bold 12px @fontfamily;
+		padding: 6px 15px
+	}
+	button.addAnother{
+		border-bottom: none;
+		border-radius: 20px 0 0 20px;
+		position: relative;
+		padding: 7px;
+		font:bold 12px @fontfamily;
+		line-height: 20px;
+		border: none;
+		&:before{
+			content:"+";
+			color:#FFF;
+			background: @secundaryColor;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			display: block;
+			float: left;
+			margin-right: 6px;
+		}
+	}
+	aside{
+		width: 276px;
+		padding-left: 44px;
+		border-left: 1px solid #f2f2f2;
+		li{
+			font:12px @fontfamily;
+			list-style-position: inside;
+			color: #26a9e7;
+			a{
+				color: #26a9e7;
+			}
+		}
+	}
+}
