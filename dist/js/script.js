@@ -2,64 +2,36 @@
     I know you guys prefer pure js, but I'm running out of time. I choose use jQuery to do my work faster.
 */
 // KO. Functions
-function Menu(){
-    self.menu = [
-        {
-            "id": "1",
-            "name": "Cheap App",
-            "isActive": true
-        },
-        {
-            "id": "2",
-            "name": "Ship App",
-            "isActive": false
-        },
-        {
-            "id": "3",
-            "name": "Beer App",
-            "isActive": true
-        },
-        {
-            "id": "4",
-            "name": "Bear App",
-            "isActive": false
-        },
-        {
-            "id": "5",
-            "name": "Wear App",
-            "isActive": true
-        },
-        {
-            "id": "6",
-            "name": "Were App",
-            "isActive": false
-        }
-    ];    
-}
-function AppStats (){
-    self.web1app = [
-        {
-            "stats": [
-                {
-                    "type": "cpu",
-                    "value": 20
-                }
-            ]
-        },
-        {
-            "stats": [
-                {
-                    "type": "ram",
-                    "value": 30
-                }
-            ]
-        }
-    ];  
-}
-
-
-ko.applyBindings(new Menu(),document.getElementById("menu"));
-ko.applyBindings(new AppStats(),document.getElementById("statsApp"));
+var Menu = {
+    menu : ko.observableArray()
+};
+var AppStats =  {
+    stats : ko.observableArray()
+};
+var AppLucy =  {
+    stats : ko.observableArray()
+};
+$( document ).ready(function(){
+    $.getJSON("http://demo2177885.mockable.io/apps",function(data){
+        $.each(ko.toJS(data),function(i,obj){
+            Menu.menu.push(obj);
+        });
+    });
+    $.getJSON("http://demo2177885.mockable.io/web1app",function(data){
+        $.each(ko.toJS(data),function(i,obj){
+            AppStats.stats.push(obj);
+        });
+    });
+      $.getJSON("http://demo2177885.mockable.io/db1lucy",function(data){
+        $.each(ko.toJS(data),function(i,obj){
+            AppLucy.stats.push(obj);
+        });
+    });
+    
+});
+ko.applyBindings(Menu,document.getElementById("menu"));
+ko.applyBindings(AppStats,document.getElementById("statsApp"));
+ko.applyBindings(AppLucy,document.getElementById("statsLucy"));
   
 
 // ***************************************************************************

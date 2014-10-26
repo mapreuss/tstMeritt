@@ -33,10 +33,10 @@
 					<div class="box">
 						<div class="ico"></div>
 
-						<span data-bind="foreach: web1app" id="statsApp">
-							<label data-bind="text: stats.type"></label>
-							<div class="stats"><div class="bar" data-bind="style: { width: stats.value + '%' }" ></div></div>
-							<br>
+						<span data-bind="foreach: stats" id="statsApp">
+							<label data-bind="text: stats[0].type"></label>
+							<div class="stats"><div class="bar" data-bind="style: { width: stats[0].value + '%' }" ></div></div>
+							<br>							
 						</span>
 					</div>
 					<nav><a href="#">manage</a></nav>
@@ -45,11 +45,11 @@
 					<h3>DB1 - Lucy</h3>
 					<div class="box">
 						<div class="ico"></div>
-						<label>cpu</label>
-						<div class="stats"><div class="bar" style="width:30%"></div></div>
-						<br>
-						<label>ram</label>
-						<div class="stats"><div class="bar" style="width:10%"></div></div>
+						<span data-bind="foreach: stats" id="statsLucy">
+							<label data-bind="text: stats[0].type"></label>
+							<div class="stats"><div class="bar" data-bind="style: { width: stats[0].value + '%' }" ></div></div>
+							<br>							
+						</span>
 					</div>
 					<nav><a href="#">manage</a></nav>
 				</li>
