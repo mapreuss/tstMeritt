@@ -12,9 +12,9 @@
 		<header>
 			<h1><a href="#">Monster-App</a></h1>
 			<nav class="navmain">
-			<ul data-bind="foreach: menuItems" >
-				<li><a href="" data-bind="text: $data.name, css: { active: $data.isActive == true }"></a></li>
-			</ul>
+			<ul data-bind="foreach: menu" id="menu">
+				<li><a href="" data-bind="text: name, css: { active: isActive }"></a></li>
+			</ul> 
 			</nav>
 			<nav class="subnav fr">
 				<ul>
@@ -32,11 +32,12 @@
 					<h3>Web1 app</h3>
 					<div class="box">
 						<div class="ico"></div>
-						<label>cpu</label>
-						<div class="stats"><div class="bar" style="width:10%"></div></div>
-						<br>
-						<label>ram</label>
-						<div class="stats"><div class="bar" style="width:20%"></div></div>
+
+						<span data-bind="foreach: web1app" id="statsApp">
+							<label data-bind="text: stats.type"></label>
+							<div class="stats"><div class="bar" data-bind="style: { width: stats.value + '%' }" ></div></div>
+							<br>
+						</span>
 					</div>
 					<nav><a href="#">manage</a></nav>
 				</li>
@@ -102,7 +103,7 @@
 		<!-- Uptime graph -->
 		<section class="fr graph clf">
 			<label>Avg. <br> Response <br> Time(sec).</label>
-			<canvas id="canvas" width="400" height="85"></canvas>
+			<canvas id="canvas" width="400" height="72"></canvas>
 		</section>
 		</div>
 
@@ -154,8 +155,11 @@
 			</aside>
 		</section>
 	</div>
+
+	<!-- JS scripts -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/knockout-3.2.0.js"></script>
+	<script src="js/ko.mapping.js"></script>
 	<script src="js/Chart.Core.js"></script>
 	<script src="js/Chart.Line.js"></script>
 	<script src="js/script.js"></script>
